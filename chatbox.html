@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chatbox</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 300px;
+            border: solid 1px papayawhip;
+        }
+        .input {
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+    <input type="text" class="input"/><button class="tmbl">send</button>
+
+
+    <script>
+        var tombol = document.querySelector(".tmbl");
+        var box = document.querySelector(".box");
+        var input = document.querySelector(".input");
+
+        tombol.addEventListener("click", function(){
+            box.innerHTML = box.innerHTML + "<br>" + input.value;
+            input.value = "";
+    
+        });
+            
+    </script>
+</body>
+</html>
