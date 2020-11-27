@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kurs</title>
+    <script>
+        function kurs() {
+            let f1 = Number(document.getElementById("hp").value);
+            let n1 = document.getElementById("valas").value;
+
+            if (n1 === "dollar") {
+                document.getElementById("rupiah").value = f1 * 9.915;
+            }   else if (n1 === "dollarSing") {
+                document.getElementById("rupiah").value = f1 * 13.427;
+            }   else if  (n1 === "ringgit") {   
+                document.getElementById("rupiah").value = f1 * 874;
+            }   else if (n1 === "yen") {
+                document.getElementById("rupiah").value = f1 * 120;
+            }   else if (n1 === "euro") {
+                document.getElementById("rupiah").value = f1 * 15.888;
+            }   else if (n1 === "riyal") {
+                document.getElementById("rupiah").value = f1 * 3.592;
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <h2>KURS MATA UANG </h2>
+        <table>
+            <tr>
+               <th>Masukan Nilai</th>
+               <th>Valas</th>
+               <th>Nilai Rupiah</th>
+            </tr>
+            <tr>
+                <td>
+                     <input type="text" id="hp" onchange="kurs()">
+                </td>
+                <td>
+            <select name="rupiah" id="valas" onchange="kurs()">  
+                <option value="pilih"></option>
+                <option value="dollar">Dollar US</option>
+                <option value="dollarSing">Dollar singapura</option>
+                <option value="ringgit">Ringgit Malaysia</option>
+                <option value="yen">Yen Japan</option>
+                <option value="euro">Euro</option>
+                <option value="riyal">Riyal Arab</option>
+            </select>
+         </td>
+         <td><input type="text" id="rupiah" ></td>
+     </tr>
+    </table> 
+    <h6>*masukan nominal yang ingin diubah ^^</h6>
+</fieldset>  
+</body>
+</html>
